@@ -1,0 +1,119 @@
+error: uncaughtException: Please install pg package manually
+Error: Please install pg package manually
+    at ConnectionManager._loadDialectModule (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/abstract/connection-manager.js:81:15)
+    at new ConnectionManager (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:18:24)
+    at new PostgresDialect (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/index.js:15:30)
+    at new Sequelize (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/sequelize.js:368:20)
+    at Object.<anonymous> (/home/user/User_Express_project/UserApiProject/src/config/database.js:25:19)
+    at Module._compile (internal/modules/cjs/loader.js:999:30)
+    at Module._compile (/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js:117:24)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Object.newLoader [as .js] (/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (internal/modules/cjs/loader.js:863:32) {"date":"Sat Jul 13 2024 09:43:50 GMT+0530 (India Standard Time)","error":{},"exception":true,"os":{"loadavg":[0.74,0.55,0.6],"uptime":67507.12},"process":{"argv":["node","/home/user/User_Express_project/UserApiProject/src/index.js"],"cwd":"/home/user/User_Express_project/UserApiProject","execPath":"/usr/bin/node","gid":1000,"memoryUsage":{"arrayBuffers":968280,"external":2946127,"heapTotal":82993152,"heapUsed":62893000,"rss":134934528},"pid":23529,"uid":1000,"version":"v12.22.9"},"stack":"Error: Please install pg package manually\n    at ConnectionManager._loadDialectModule (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/abstract/connection-manager.js:81:15)\n    at new ConnectionManager (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:18:24)\n    at new PostgresDialect (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/index.js:15:30)\n    at new Sequelize (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/sequelize.js:368:20)\n    at Object.<anonymous> (/home/user/User_Express_project/UserApiProject/src/config/database.js:25:19)\n    at Module._compile (internal/modules/cjs/loader.js:999:30)\n    at Module._compile (/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js:117:24)\n    at Module._extensions..js (internal/modules/cjs/loader.js:1027:10)\n    at Object.newLoader [as .js] (/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js:121:7)\n    at Module.load (internal/modules/cjs/loader.js:863:32)","timestamp":"2024-07-13T04:13:50.058Z","trace":[{"column":15,"file":"/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/abstract/connection-manager.js","function":"ConnectionManager._loadDialectModule","line":81,"method":"_loadDialectModule","native":false},{"column":24,"file":"/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js","function":"new ConnectionManager","line":18,"method":null,"native":false},{"column":30,"file":"/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/index.js","function":"new PostgresDialect","line":15,"method":null,"native":false},{"column":20,"file":"/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/sequelize.js","function":"new Sequelize","line":368,"method":null,"native":false},{"column":19,"file":"/home/user/User_Express_project/UserApiProject/src/config/database.js","function":null,"line":25,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":999,"method":"_compile","native":false},{"column":24,"file":"/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js","function":"Module._compile","line":117,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1027,"method":".js","native":false},{"column":7,"file":"/home/user/User_Express_project/UserApiProject/node_modules/pirates/lib/index.js","function":"Object.newLoader [as .js]","line":121,"method":"js]","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":863,"method":"load","native":false}]}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:19:00.415Z"}
+error: Could not connect to the database. password authentication failed for user "user" {"name":"SequelizeConnectionError","original":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"parent":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"stack":"SequelizeConnectionError: password authentication failed for user \"user\"\n    at new BaseError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/base-error.ts:26:5)\n    at new ConnectionError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/connection-error.ts:12:5)\n    at Client._connectionCallback (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:196:24)\n    at Client._handleErrorWhileConnecting (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:327:19)\n    at Client._handleErrorMessage (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:347:19)\n    at Connection.emit (events.js:314:20)\n    at Connection.EventEmitter.emit (domain.js:483:12)\n    at /home/user/User_Express_project/UserApiProject/node_modules/pg/lib/connection.js:117:12\n    at Parser.parse (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/parser.ts:104:9)\n    at Socket.<anonymous> (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/index.ts:7:48)","timestamp":"2024-07-13T04:19:00.555Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:24:10.614Z"}
+error: Could not connect to the database. password authentication failed for user "user" {"name":"SequelizeConnectionError","original":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"parent":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"stack":"SequelizeConnectionError: password authentication failed for user \"user\"\n    at new BaseError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/base-error.ts:26:5)\n    at new ConnectionError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/connection-error.ts:12:5)\n    at Client._connectionCallback (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:196:24)\n    at Client._handleErrorWhileConnecting (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:327:19)\n    at Client._handleErrorMessage (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:347:19)\n    at Connection.emit (events.js:314:20)\n    at Connection.EventEmitter.emit (domain.js:483:12)\n    at /home/user/User_Express_project/UserApiProject/node_modules/pg/lib/connection.js:117:12\n    at Parser.parse (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/parser.ts:104:9)\n    at Socket.<anonymous> (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/index.ts:7:48)","timestamp":"2024-07-13T04:24:10.798Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:24:52.804Z"}
+error: Could not connect to the database. password authentication failed for user "user" {"name":"SequelizeConnectionError","original":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"parent":{"code":"28P01","file":"auth.c","length":100,"line":"323","name":"error","routine":"auth_failed","severity":"FATAL"},"stack":"SequelizeConnectionError: password authentication failed for user \"user\"\n    at new BaseError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/base-error.ts:26:5)\n    at new ConnectionError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/connection-error.ts:12:5)\n    at Client._connectionCallback (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:196:24)\n    at Client._handleErrorWhileConnecting (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:327:19)\n    at Client._handleErrorMessage (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:347:19)\n    at Connection.emit (events.js:314:20)\n    at Connection.EventEmitter.emit (domain.js:483:12)\n    at /home/user/User_Express_project/UserApiProject/node_modules/pg/lib/connection.js:117:12\n    at Parser.parse (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/parser.ts:104:9)\n    at Socket.<anonymous> (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/index.ts:7:48)","timestamp":"2024-07-13T04:24:52.891Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:26:09.038Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T04:26:09.235Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:26:39.775Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T04:26:39.960Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:27:05.515Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T04:27:05.695Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:45:49.411Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T04:45:49.729Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T04:46:32.916Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T04:46:33.095Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T05:19:56.219Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T05:19:56.404Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T05:20:28.177Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T05:20:28.352Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T05:20:53.334Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T05:20:53.523Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T05:22:10.416Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T05:22:10.604Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T05:23:38.582Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T05:23:38.771Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T06:52:24.815Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T06:52:25.024Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T07:06:21.380Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T07:06:21.560Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T07:06:54.448Z"}
+error: Could not connect to the database. database "userProject" does not exist {"name":"SequelizeConnectionError","original":{"code":"3D000","file":"postinit.c","length":97,"line":"1019","name":"error","routine":"InitPostgres","severity":"FATAL"},"parent":{"code":"3D000","file":"postinit.c","length":97,"line":"1019","name":"error","routine":"InitPostgres","severity":"FATAL"},"stack":"SequelizeConnectionError: database \"userProject\" does not exist\n    at new BaseError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/base-error.ts:26:5)\n    at new ConnectionError (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/errors/connection-error.ts:12:5)\n    at Client._connectionCallback (/home/user/User_Express_project/UserApiProject/node_modules/sequelize/src/dialects/postgres/connection-manager.js:196:24)\n    at Client._handleErrorWhileConnecting (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:327:19)\n    at Client._handleErrorMessage (/home/user/User_Express_project/UserApiProject/node_modules/pg/lib/client.js:347:19)\n    at Connection.emit (events.js:314:20)\n    at Connection.EventEmitter.emit (domain.js:483:12)\n    at /home/user/User_Express_project/UserApiProject/node_modules/pg/lib/connection.js:117:12\n    at Parser.parse (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/parser.ts:104:9)\n    at Socket.<anonymous> (/home/user/User_Express_project/UserApiProject/node_modules/pg-protocol/src/index.ts:7:48)","timestamp":"2024-07-13T07:06:54.531Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T07:07:30.816Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T07:07:30.984Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T07:14:54.290Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T07:14:54.475Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstName" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-13T07:17:04.683Z"}
+error: 
+    status - 500 
+    message - ValidationError: "email" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-13T07:17:43.283Z"}
+error: 
+    status - 500 
+    message - ValidationError: "password" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-13T07:18:04.260Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T07:21:43.640Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T07:21:43.821Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstName" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-13T07:24:05.255Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/users/2 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2024-07-13T07:25:32.379Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T08:45:17.180Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T08:45:17.401Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T08:57:48.460Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T08:57:48.651Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T09:00:27.638Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T09:00:27.815Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T09:01:51.193Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T09:01:51.369Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:43:02.665Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:43:03.443Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:43:42.197Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:43:42.281Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:44:03.038Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:44:03.129Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:45:53.004Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:45:53.099Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:46:50.287Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:46:50.372Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:47:35.598Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:47:35.690Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:48:43.176Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:48:43.271Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:49:02.524Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:49:02.617Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:49:15.747Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:49:15.837Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:50:33.948Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:50:34.040Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:56:22.250Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:56:22.336Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T12:57:06.509Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T12:57:06.604Z"}
+info: Server started at http://localhost:3007/api/v1/ {"timestamp":"2024-07-13T13:04:40.337Z"}
+info: Connected to the database. {"timestamp":"2024-07-13T13:04:40.431Z"}
