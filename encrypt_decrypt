@@ -1,0 +1,33 @@
+Encryption: This involves transforming plain text or data (often referred to as plaintext) into an unreadable format (cipher text) using an encryption algorithm and a key. The goal is to ensure that even if someone intercepts the encrypted data, they cannot easily understand it without the decryption key.
+
+Decryption: This is the process of converting encrypted data back into its original plaintext form using a decryption algorithm and the correct key. Decryption allows authorized users to access and understand the original information.
+
+bcrypt is a cryptographic hashing function designed primarily for password hashing. It's used to securely store passwords in databases by converting 
+
+bcrypt is a one-way hashing function, meaning it converts input data (such as passwords) into a fixed-size hash value
+
+Salted Hashes: bcrypt automatically generates and incorporates a salt (a random value) into the hash, which adds an extra layer of security by ensuring that even if two users have the same password, their hashes will differ.
+
+Importing bcrypt:
+
+1. const bcrypt = require('bcrypt');
+------imports the bcrypt library, which provides functions for hashing passwords securely.
+
+Setting Salt Rounds:
+
+2.const saltRounds = 10;
+saltRounds specifies the number of rounds to use when generating a salt. More rounds generally increase the time taken to hash a password, making it harder for attackers to perform brute-force attacks.
+
+Defining Plaintext Passwords:
+
+3.const myPlaintextPassword = 's0/\/\P4$$w0rD';
+4.const someOtherPlaintextPassword = 'not_bacon';
+These variables store plaintext passwords that you want to hash.
+
+Hashing Techniques
+
+5. bcrypt.genSalt(saltRounds, function(err, salt){
+6. bcrypt.hash(myplaintextPassword, salt, function(err, hash) {
+7. })
+8. })
+

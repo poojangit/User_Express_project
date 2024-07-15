@@ -4,6 +4,7 @@ const User = require('../models/user')(sequelize, DataTypes);
 
 //get all users
 export const getAllUsers = async () => {
+  try {
   const data = await User.findAll();
   console.log(data.length);
   if(data.length == 0){
@@ -18,10 +19,19 @@ export const getAllUsers = async () => {
     data : data,
     message : "All the users details fetched successfully!!"
   };
-};
+}
+catch(error) {
+  return {
+    code : HttpStatus.INTERNAL_SERVER_ERROR ,
+    data : [] ,
+    message  :"Error found"
+  }
+}
+}
 
 //create new user
 export const newUser = async (body) => {
+  try{
   const checkUser = await User.findOne({
     where:{
       email : body.email
@@ -42,9 +52,18 @@ console.log(checkUser);
     data : [], 
     message : "User Already exists"
   }
+}
+catch(error) {
+  return {
+    code : HttpStatus.INTERNAL_SERVER_ERROR ,
+    data : [] ,
+    message  :"Error found"
+  }
+}
 };
 //update single user
 export const updateUser = async(id, body) => {
+  try {
   const checkUser = await User.findOne({
     where : {
       id : id
@@ -57,7 +76,6 @@ export const updateUser = async(id, body) => {
       message : "User not found"
     }
   }
-
   await User.update (body,{
     where : {
       id : id
@@ -75,9 +93,18 @@ export const updateUser = async(id, body) => {
     message : "User got updated Successfully!!"
   }
 }
+catch(error) {
+  return {
+    code : HttpStatus.INTERNAL_SERVER_ERROR ,
+    data : [] ,
+    message  :"Error found"
+  }
+}
+}
 
 //delete single user
 export const deleteUser  = async(id) => {
+  try {
   const checkUser = await User.findOne({
     where : {
       id : id
@@ -103,14 +130,23 @@ export const deleteUser  = async(id) => {
 
   }
 }
+catch(error) {
+  return {
+    code : HttpStatus.INTERNAL_SERVER_ERROR ,
+    data : [] ,
+    message  :"Error found"
+  }
+}
+}
 
 //get single user
 export const getUser = async (id) => {
-  const data = await User.findOne({
-    where : {
-      id : id
-    }
-  })
+  // const data = await User.findOne({
+  //   where : {
+  //     id : id
+  //   }
+  // })
+  const data = await User.findByPk(id)
   if(data == null){
     return {
       code : HttpStatus.NOT_FOUND,
@@ -118,10 +154,10 @@ export const getUser = async (id) => {
       message : "No User found"
     }
   }
-
   return {
     code : HttpStatus.OK,
     data : data,
     message : "User details fetched successfully"
   }
 };
+
